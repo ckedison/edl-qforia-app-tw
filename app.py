@@ -87,7 +87,7 @@ def get_query_fanout_prompt(q, mode):
     min_queries_simple = 10
     min_queries_complex = 20
 
-    if mode == "AI 概覽 (簡單)":
+    if mode == "AI Overview (簡單)":
         num_queries_instruction = (
             f"首先，分析使用者查詢：「{q}」。基於其複雜度和「{mode}」模式，"
             f"**您必須決定一個最佳的查詢生成數量。** "
@@ -96,7 +96,7 @@ def get_query_fanout_prompt(q, mode):
             f"如果查詢包含幾個不同面向或常見的後續問題，目標可以設定在 {min_queries_simple + 3}-{min_queries_simple + 5} 個查詢。"
             f"請簡要說明您選擇這個特定數字的理由。查詢本身應範圍明確且高度相關。"
         )
-    else:  # AI 模式 (複雜)
+    else:  # AI Mode (複雜)
         num_queries_instruction = (
             f"首先，分析使用者查詢：「{q}」。基於其複雜度和「{mode}」模式，"
             f"**您必須決定一個最佳的查詢生成數量。** "
