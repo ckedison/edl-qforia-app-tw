@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+# 確保此檔案為純文字格式，開頭不應有任何非程式碼字元。
 
 import streamlit as st
 import google.generativeai as genai
