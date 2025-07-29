@@ -7,10 +7,33 @@ import pandas as pd
 import json
 import re
 
+
+import streamlit as st
+
+# 注入 CSS 來隱藏 Streamlit 的標頭和選單
+
+
+
 # --- 應用程式設定與標題 ---
 # st.set_page_config 會設定頁面的基本屬性，如標題和佈局
 # layout="wide" 可以讓內容佔滿整個螢幕寬度，更適合顯示表格數據
 st.set_page_config(page_title="Qforia 查詢模擬器", layout="wide")
+st.markdown("""
+    <style>
+        /* 隱藏 Streamlit 的主選單按鈕 */
+        [data-testid="stMainMenu"] {
+            visibility: hidden;
+        }
+        /* 隱藏 Streamlit 的標頭 */
+        header {
+            visibility: hidden;
+        }
+        /* 隱藏頁腳 */
+        footer {
+            visibility: hidden;
+        }
+    </style>
+""", unsafe_allow_html=True)
 st.title("🔍 Qforia: AI 應用查詢擴展模擬器")
 st.markdown("一個模擬生成式 AI 搜尋服務（如 Google AI Overview）在收到使用者查詢後，如何在背景生成多個相關子查詢的工具。")
 
