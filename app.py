@@ -63,7 +63,7 @@ gemini_key = st.sidebar.text_input("請輸入您的 Gemini API Key", type="passw
 # 提供預設查詢，引導使用者操作
 user_query = st.sidebar.text_area("輸入您的查詢", "帶家人去北海道五天四夜，有哪些推薦的行程？預算有限。", height=120)
 # 讓使用者選擇模式，影響生成查詢的數量和複雜度
-mode = st.sidebar.radio("查詢模式", ["AI 概覽 (簡單)", "AI 模式 (複雜)"], help="簡單模式生成較少但核心的查詢；複雜模式則會生成更多、更深入的查詢。")
+mode = st.sidebar.radio("查詢模式", ["AI Overview (簡單)", "AI Mode (複雜)"], help="簡單模式生成較少但核心的查詢；複雜模式則會生成更多、更深入的查詢。")
 
 # --- Gemini 模型設定 ---
 model = None
